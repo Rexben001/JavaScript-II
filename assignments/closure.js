@@ -3,27 +3,26 @@
 
 function information(name) {
   function nameAndEmail() {
-    const email = 'john@gmail.com';
+    const email = "john@gmail.com";
     console.log(`My name is ${name} and my email is ${email}`);
   }
   nameAndEmail();
 }
 
-information('John');
+information("John");
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
   let count = 0;
-  return (function () {
+  return function() {
     console.log(count += 1);
-  });
+  };
 };
 
-// Example usage: 
+// Example usage:
 const newCounter = counter();
 newCounter(); // 1
 newCounter(); // 2
@@ -35,8 +34,8 @@ const counterFactory = () => {
   // `decrement` should decrement the counter variable and return it.
   let counter = 0;
   const obj = {
-    increment: () => counter += 1,
-    decrement: () => counter -= 1
+    increment: () => (counter += 1),
+    decrement: () => (counter -= 1)
   };
   return obj;
 };
