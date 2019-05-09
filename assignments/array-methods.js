@@ -459,7 +459,7 @@ const runners = [
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName.
 let fullName = [];
 runners.forEach(names =>
-  fullName.push(`${names.first_name} ${names.lastname}`)
+  fullName.push(`${names.first_name} ${names.last_name}`)
 );
 console.log(fullName);
 
